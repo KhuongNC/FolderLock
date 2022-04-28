@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoldeLock", "FoldeLock\FoldeLock.csproj", "{166DFCF6-6EC0-44A9-9BB3-0A23AB5F386D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{166DFCF6-6EC0-44A9-9BB3-0A23AB5F386D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166DFCF6-6EC0-44A9-9BB3-0A23AB5F386D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166DFCF6-6EC0-44A9-9BB3-0A23AB5F386D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166DFCF6-6EC0-44A9-9BB3-0A23AB5F386D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CD241A0-3E9F-483D-9C58-88534B894DBB}
+	EndGlobalSection
+EndGlobal
