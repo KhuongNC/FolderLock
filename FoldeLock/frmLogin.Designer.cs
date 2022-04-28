@@ -1,7 +1,7 @@
 ﻿
 namespace FoldeLock
 {
-    partial class frmLogin
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,7 @@ namespace FoldeLock
             this.ButtonCancel = new System.Windows.Forms.Button();
             this.ButtonOk = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TxtPath = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +101,7 @@ namespace FoldeLock
             this.ButtonCancel.Size = new System.Drawing.Size(55, 47);
             this.ButtonCancel.TabIndex = 25;
             this.ButtonCancel.UseVisualStyleBackColor = true;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // ButtonOk
             // 
@@ -111,6 +113,7 @@ namespace FoldeLock
             this.ButtonOk.Size = new System.Drawing.Size(55, 47);
             this.ButtonOk.TabIndex = 24;
             this.ButtonOk.UseVisualStyleBackColor = true;
+            this.ButtonOk.Click += new System.EventHandler(this.ButtonOk_Click);
             // 
             // pictureBox1
             // 
@@ -122,12 +125,25 @@ namespace FoldeLock
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // frmLogin
+            // TxtPath
             // 
+            this.TxtPath.Location = new System.Drawing.Point(16, 4);
+            this.TxtPath.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtPath.Name = "TxtPath";
+            this.TxtPath.PasswordChar = '*';
+            this.TxtPath.ReadOnly = true;
+            this.TxtPath.Size = new System.Drawing.Size(164, 22);
+            this.TxtPath.TabIndex = 26;
+            this.TxtPath.Visible = false;
+            // 
+            // FrmLogin
+            // 
+            this.AcceptButton = this.ButtonOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(451, 178);
+            this.Controls.Add(this.TxtPath);
             this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.ButtonOk);
             this.Controls.Add(this.Label3);
@@ -136,9 +152,10 @@ namespace FoldeLock
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "frmLogin";
+            this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Log In Form";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,6 +172,7 @@ namespace FoldeLock
         internal System.Windows.Forms.TextBox txtUser;
         internal System.Windows.Forms.Button ButtonCancel;
         internal System.Windows.Forms.Button ButtonOk;
+        internal System.Windows.Forms.TextBox TxtPath;
     }
 }
 
