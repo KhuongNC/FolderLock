@@ -76,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -84,6 +87,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -100,6 +104,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <Content Include="Resources\2057e91461b7b69.jpg" />
+    <Content Include="Resources\2f26c83436ab46eab35200239aadb977.jpg" />
+    <Content Include="Resources\2f26c83436ab46eab35200239aadb9771.jpg" />
+    <Content Include="Resources\about-us-icon-15.jpg" />
+    <Content Include="Resources\blue_abstract_background_310971.jpg" />
+    <Content Include="Resources\button_cancel.png" />
+    <Content Include="Resources\button_ok.png" />
+    <Content Include="Resources\changpass.png" />
+    <Content Include="Resources\dbbddcb8478a9e3ec707766331aa9932.png" />
+    <Content Include="Resources\hdd.png" />
+    <Content Include="Resources\hide.jpg" />
+    <Content Include="Resources\Login Manager.png" />
+    <Content Include="Resources\Main.jpg" />
+    <Content Include="Resources\Main1.jpg" />
+    <Content Include="Resources\Main2.jpg" />
+    <Content Include="Resources\min.jpg" />
+    <Content Include="Resources\min1.jpg" />
+    <Content Include="Resources\ok.png" />
+    <Content Include="Resources\okBtn.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
