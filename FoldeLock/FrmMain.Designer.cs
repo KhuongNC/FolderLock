@@ -181,7 +181,7 @@ namespace FoldeLock
             // 
             this.BtnMinimize.BackgroundImage = global::FoldeLock.Properties.Resources.min1;
             this.BtnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnMinimize.Location = new System.Drawing.Point(790, 2);
+            this.BtnMinimize.Location = new System.Drawing.Point(789, 4);
             this.BtnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.BtnMinimize.Name = "BtnMinimize";
             this.BtnMinimize.Size = new System.Drawing.Size(49, 44);
@@ -193,7 +193,7 @@ namespace FoldeLock
             // 
             this.BtnClose.BackgroundImage = global::FoldeLock.Properties.Resources.button_cancel;
             this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnClose.Location = new System.Drawing.Point(842, 2);
+            this.BtnClose.Location = new System.Drawing.Point(841, 4);
             this.BtnClose.Margin = new System.Windows.Forms.Padding(4);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(49, 44);
@@ -233,7 +233,7 @@ namespace FoldeLock
             this.PanelHidden.Controls.Add(this.GbDirectoryHidden);
             this.PanelHidden.Controls.Add(this.GbFileHidden);
             this.PanelHidden.Controls.Add(this.PanelInfo);
-            this.PanelHidden.Location = new System.Drawing.Point(253, 91);
+            this.PanelHidden.Location = new System.Drawing.Point(233, 89);
             this.PanelHidden.Margin = new System.Windows.Forms.Padding(4);
             this.PanelHidden.Name = "PanelHidden";
             this.PanelHidden.Size = new System.Drawing.Size(449, 464);
@@ -330,7 +330,6 @@ namespace FoldeLock
             // GbFileHidden
             // 
             this.GbFileHidden.BackColor = System.Drawing.Color.Transparent;
-            this.GbFileHidden.Controls.Add(this.GbChangeIconHDD);
             this.GbFileHidden.Controls.Add(this.BtnUnhideFile);
             this.GbFileHidden.Controls.Add(this.BtnHideFile);
             this.GbFileHidden.Controls.Add(this.BtnBrowserFile_Hide);
@@ -603,7 +602,7 @@ namespace FoldeLock
             this.GbChangeIconHDD.Controls.Add(this.Label7);
             this.GbChangeIconHDD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GbChangeIconHDD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GbChangeIconHDD.Location = new System.Drawing.Point(11, 33);
+            this.GbChangeIconHDD.Location = new System.Drawing.Point(204, 142);
             this.GbChangeIconHDD.Margin = new System.Windows.Forms.Padding(4);
             this.GbChangeIconHDD.Name = "GbChangeIconHDD";
             this.GbChangeIconHDD.Padding = new System.Windows.Forms.Padding(4);
@@ -746,7 +745,8 @@ namespace FoldeLock
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FoldeLock.Properties.Resources.Main2;
-            this.ClientSize = new System.Drawing.Size(892, 604);
+            this.ClientSize = new System.Drawing.Size(891, 609);
+            this.Controls.Add(this.GbChangeIconHDD);
             this.Controls.Add(this.GbFolderLockUnlock);
             this.Controls.Add(this.PanelHidden);
             this.Controls.Add(this.Label17);
