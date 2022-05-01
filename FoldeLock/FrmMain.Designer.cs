@@ -163,6 +163,7 @@ namespace FoldeLock
             this.BtnHideFolder.Size = new System.Drawing.Size(137, 116);
             this.BtnHideFolder.TabIndex = 3;
             this.BtnHideFolder.UseVisualStyleBackColor = true;
+            this.BtnHideFolder.Click += new System.EventHandler(this.BtnHideFolder_Click);
             // 
             // BtnFolderLock
             // 
@@ -175,6 +176,7 @@ namespace FoldeLock
             this.BtnFolderLock.Size = new System.Drawing.Size(137, 112);
             this.BtnFolderLock.TabIndex = 2;
             this.BtnFolderLock.UseVisualStyleBackColor = true;
+            this.BtnFolderLock.Click += new System.EventHandler(this.BtnFolderLock_Click);
             // 
             // BtnChangeIconHDD
             // 
@@ -237,6 +239,7 @@ namespace FoldeLock
             this.BtnChangePass.Size = new System.Drawing.Size(49, 42);
             this.BtnChangePass.TabIndex = 12;
             this.BtnChangePass.UseVisualStyleBackColor = false;
+            this.BtnChangePass.Click += new System.EventHandler(this.BtnChangePass_Click);
             // 
             // PanelHidden
             // 
@@ -280,6 +283,7 @@ namespace FoldeLock
             this.BtnUnhideDirectory.TabIndex = 11;
             this.BtnUnhideDirectory.Text = "Unhide";
             this.BtnUnhideDirectory.UseVisualStyleBackColor = true;
+            this.BtnUnhideDirectory.Click += new System.EventHandler(this.BtnUnhideDirectory_Click);
             // 
             // BtnHideDirectory
             // 
@@ -291,6 +295,7 @@ namespace FoldeLock
             this.BtnHideDirectory.TabIndex = 10;
             this.BtnHideDirectory.Text = "Hide";
             this.BtnHideDirectory.UseVisualStyleBackColor = true;
+            this.BtnHideDirectory.Click += new System.EventHandler(this.BtnHideDirectory_Click);
             // 
             // BtnBrowserDirectory_Hide
             // 
@@ -302,6 +307,7 @@ namespace FoldeLock
             this.BtnBrowserDirectory_Hide.TabIndex = 9;
             this.BtnBrowserDirectory_Hide.Text = "Browse";
             this.BtnBrowserDirectory_Hide.UseVisualStyleBackColor = true;
+            this.BtnBrowserDirectory_Hide.Click += new System.EventHandler(this.BtnBrowserDirectory_Hide_Click);
             // 
             // TxtDirectoryPath
             // 
@@ -364,6 +370,7 @@ namespace FoldeLock
             this.BtnUnhideFile.TabIndex = 5;
             this.BtnUnhideFile.Text = "Unhide";
             this.BtnUnhideFile.UseVisualStyleBackColor = true;
+            this.BtnUnhideFile.Click += new System.EventHandler(this.BtnUnhideFile_Click);
             // 
             // BtnHideFile
             // 
@@ -375,6 +382,7 @@ namespace FoldeLock
             this.BtnHideFile.TabIndex = 4;
             this.BtnHideFile.Text = "Hide";
             this.BtnHideFile.UseVisualStyleBackColor = true;
+            this.BtnHideFile.Click += new System.EventHandler(this.BtnHideFile_Click);
             // 
             // BtnBrowserFile_Hide
             // 
@@ -386,6 +394,7 @@ namespace FoldeLock
             this.BtnBrowserFile_Hide.TabIndex = 3;
             this.BtnBrowserFile_Hide.Text = "Browse";
             this.BtnBrowserFile_Hide.UseVisualStyleBackColor = true;
+            this.BtnBrowserFile_Hide.Click += new System.EventHandler(this.BtnBrowserFile_Hide_Click);
             // 
             // TxtFilePath
             // 
@@ -733,7 +742,7 @@ namespace FoldeLock
             this.PanelInfo.Controls.Add(this.ButtonOK);
             this.PanelInfo.Controls.Add(this.Label15);
             this.PanelInfo.Controls.Add(this.Label16);
-            this.PanelInfo.Location = new System.Drawing.Point(213, 98);
+            this.PanelInfo.Location = new System.Drawing.Point(228, 561);
             this.PanelInfo.Margin = new System.Windows.Forms.Padding(4);
             this.PanelInfo.Name = "PanelInfo";
             this.PanelInfo.Size = new System.Drawing.Size(510, 319);
@@ -752,8 +761,8 @@ namespace FoldeLock
             this.ClientSize = new System.Drawing.Size(1365, 812);
             this.Controls.Add(this.GbChangeIconHDD);
             this.Controls.Add(this.GbFolderLockUnlock);
-            this.Controls.Add(this.PanelHidden);
             this.Controls.Add(this.PanelInfo);
+            this.Controls.Add(this.PanelHidden);
             this.Controls.Add(this.Label17);
             this.Controls.Add(this.BtnChangePass);
             this.Controls.Add(this.BtnMinimize);

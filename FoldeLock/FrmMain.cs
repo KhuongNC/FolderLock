@@ -26,7 +26,7 @@ namespace FoldeLock
             Application.Exit();
         }
 
-        #region Change drive icon
+        #region Change Drive Icon
         private void BtnChangeIconHDD_Click(object sender, EventArgs e)
         {
             GbChangeIconHDD.Visible = true;
@@ -120,8 +120,108 @@ namespace FoldeLock
         {
             GbFolderLockUnlock.Visible = false;
         }
+        private void BtnFolderLock_Click(object sender, EventArgs e)
+        {
+            GbChangeIconHDD.Visible = false;
+            GbFolderLockUnlock.Visible = true;
+            GbFileHidden.Visible = false;
+            GbDirectoryHidden.Visible = false;
+            PanelHidden.Visible = false;
+            PanelInfo.Visible = false;
+        }
 
         #endregion
 
+        #region Folder Hidden
+        private void BtnBrowserFile_Hide_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog()== DialogResult.OK)
+            {
+                TxtFilePath.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+        private void BtnHideFile_Click(object sender, EventArgs e)
+        {
+            if (TxtFilePath.Text == "")
+            {
+                MessageBox.Show("Select file");
+            }
+            else
+            {
+                File.SetAttributes(TxtFilePath.Text, FileAttributes.Hidden);
+                MessageBox.Show("Sucessfully hide");
+            }
+        }
+
+        private void BtnUnhideFile_Click(object sender, EventArgs e)
+        {
+            if (TxtFilePath.Text == "")
+            {
+                MessageBox.Show("Select path...");
+            }
+            else
+            {
+                File.SetAttributes(TxtFilePath.Text, FileAttributes.Normal);
+                MessageBox.Show("Sucessfully unhide");
+            }
+        }
+        private void BtnBrowserDirectory_Hide_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                TxtDirectoryPath.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+
+        private void BtnHideDirectory_Click(object sender, EventArgs e)
+        {
+            if (TxtDirectoryPath.Text == "")
+            {
+                MessageBox.Show("Select file");
+            }
+            else
+            {
+                File.SetAttributes(TxtDirectoryPath.Text, FileAttributes.Hidden);
+                MessageBox.Show("Sucessfully hide");
+            }
+        }
+
+        private void BtnUnhideDirectory_Click(object sender, EventArgs e)
+        {
+            if (TxtDirectoryPath.Text == "")
+            {
+                MessageBox.Show("Select path...");
+            }
+            else
+            {
+                File.SetAttributes(TxtDirectoryPath.Text, FileAttributes.Normal);
+                MessageBox.Show("Sucessfully unhide");
+            }
+        }
+
+        private void BtnHideFolder_Click(object sender, EventArgs e)
+        {
+            GbChangeIconHDD.Visible = false;
+            GbFolderLockUnlock.Visible = false;
+            GbFileHidden.Visible = true;
+            GbDirectoryHidden.Visible = false;
+            PanelHidden.Visible = true;
+            PanelInfo.Visible = false;
+        }
+
+        #endregion
+
+        private void BtnChangePass_Click(object sender, EventArgs e)
+        {
+            GbChangeIconHDD.Visible = false;
+            GbFolderLockUnlock.Visible = false;
+            GbFileHidden.Visible = false;
+            GbDirectoryHidden.Visible = false;
+            PanelHidden.Visible = false;
+            PanelInfo.Visible = false;
+
+            FrmChangePassword frmChangePassword = new FrmChangePassword();
+            frmChangePassword.Show();
+        }
     }
 }
