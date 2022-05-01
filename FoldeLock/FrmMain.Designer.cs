@@ -43,21 +43,21 @@ namespace FoldeLock
             this.Label17 = new System.Windows.Forms.Label();
             this.BtnChangePass = new System.Windows.Forms.Button();
             this.PanelHidden = new System.Windows.Forms.Panel();
-            this.GroupBoxDirectory = new System.Windows.Forms.GroupBox();
+            this.GbDirectoryHidden = new System.Windows.Forms.GroupBox();
             this.BtnUnhideDirectory = new System.Windows.Forms.Button();
             this.BtnHideDirectory = new System.Windows.Forms.Button();
             this.BtnBrowserDirectory_Hide = new System.Windows.Forms.Button();
             this.TxtDirectoryPath = new System.Windows.Forms.TextBox();
             this.Label13 = new System.Windows.Forms.Label();
             this.Label14 = new System.Windows.Forms.Label();
-            this.GroupBoxFile = new System.Windows.Forms.GroupBox();
+            this.GbFileHidden = new System.Windows.Forms.GroupBox();
             this.BtnUnhideFile = new System.Windows.Forms.Button();
             this.BtnHideFile = new System.Windows.Forms.Button();
             this.BtnBrowserFile_Hide = new System.Windows.Forms.Button();
             this.TxtFilePath = new System.Windows.Forms.TextBox();
             this.Label11 = new System.Windows.Forms.Label();
             this.Label12 = new System.Windows.Forms.Label();
-            this.GroupBoxFolder = new System.Windows.Forms.GroupBox();
+            this.GbFolderLockUnlock = new System.Windows.Forms.GroupBox();
             this.BtnCloseInFolderLock = new System.Windows.Forms.Button();
             this.Label10 = new System.Windows.Forms.Label();
             this.Label9 = new System.Windows.Forms.Label();
@@ -65,27 +65,29 @@ namespace FoldeLock
             this.BtnUnlock = new System.Windows.Forms.Button();
             this.Label8 = new System.Windows.Forms.Label();
             this.TxtFolderPath = new System.Windows.Forms.TextBox();
-            this.BtnBrowserLock = new System.Windows.Forms.Button();
+            this.BtnBrowserFolderLock = new System.Windows.Forms.Button();
             this.Label16 = new System.Windows.Forms.Label();
             this.Label15 = new System.Windows.Forms.Label();
             this.ButtonOK = new System.Windows.Forms.Button();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
-            this.TxtIcon = new System.Windows.Forms.TextBox();
-            this.BtnSelectIcon = new System.Windows.Forms.Button();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.ComboBox1 = new System.Windows.Forms.ComboBox();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.BtnChangeIcon = new System.Windows.Forms.Button();
+            this.GbChangeIconHDD = new System.Windows.Forms.GroupBox();
             this.BtnCloseInChangeIcon = new System.Windows.Forms.Button();
+            this.BtnChangeIcon = new System.Windows.Forms.Button();
+            this.Label5 = new System.Windows.Forms.Label();
+            this.CbDriveLetter = new System.Windows.Forms.ComboBox();
+            this.Label4 = new System.Windows.Forms.Label();
+            this.BtnSelectIcon = new System.Windows.Forms.Button();
+            this.TxtIcon = new System.Windows.Forms.TextBox();
+            this.Label6 = new System.Windows.Forms.Label();
+            this.Label7 = new System.Windows.Forms.Label();
             this.PanelInfo = new System.Windows.Forms.Panel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.Panel1.SuspendLayout();
             this.PanelHidden.SuspendLayout();
-            this.GroupBoxDirectory.SuspendLayout();
-            this.GroupBoxFile.SuspendLayout();
-            this.GroupBoxFolder.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
+            this.GbDirectoryHidden.SuspendLayout();
+            this.GbFileHidden.SuspendLayout();
+            this.GbFolderLockUnlock.SuspendLayout();
+            this.GbChangeIconHDD.SuspendLayout();
             this.PanelInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,6 +187,7 @@ namespace FoldeLock
             this.BtnChangeIconHDD.Size = new System.Drawing.Size(143, 114);
             this.BtnChangeIconHDD.TabIndex = 1;
             this.BtnChangeIconHDD.UseVisualStyleBackColor = true;
+            this.BtnChangeIconHDD.Click += new System.EventHandler(this.BtnChangeIconHDD_Click);
             // 
             // BtnMinimize
             // 
@@ -196,6 +199,7 @@ namespace FoldeLock
             this.BtnMinimize.Size = new System.Drawing.Size(49, 44);
             this.BtnMinimize.TabIndex = 7;
             this.BtnMinimize.UseVisualStyleBackColor = true;
+            this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // BtnClose
             // 
@@ -207,6 +211,7 @@ namespace FoldeLock
             this.BtnClose.Size = new System.Drawing.Size(49, 44);
             this.BtnClose.TabIndex = 6;
             this.BtnClose.UseVisualStyleBackColor = true;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // Label17
             // 
@@ -236,34 +241,34 @@ namespace FoldeLock
             // PanelHidden
             // 
             this.PanelHidden.BackColor = System.Drawing.Color.Transparent;
-            this.PanelHidden.Controls.Add(this.GroupBoxDirectory);
-            this.PanelHidden.Controls.Add(this.GroupBoxFile);
-            this.PanelHidden.Location = new System.Drawing.Point(240, 89);
+            this.PanelHidden.Controls.Add(this.GbDirectoryHidden);
+            this.PanelHidden.Controls.Add(this.GbFileHidden);
+            this.PanelHidden.Location = new System.Drawing.Point(233, 89);
             this.PanelHidden.Margin = new System.Windows.Forms.Padding(4);
             this.PanelHidden.Name = "PanelHidden";
             this.PanelHidden.Size = new System.Drawing.Size(449, 464);
             this.PanelHidden.TabIndex = 15;
             this.PanelHidden.Visible = false;
             // 
-            // GroupBoxDirectory
+            // GbDirectoryHidden
             // 
-            this.GroupBoxDirectory.BackColor = System.Drawing.Color.Transparent;
-            this.GroupBoxDirectory.Controls.Add(this.BtnUnhideDirectory);
-            this.GroupBoxDirectory.Controls.Add(this.BtnHideDirectory);
-            this.GroupBoxDirectory.Controls.Add(this.BtnBrowserDirectory_Hide);
-            this.GroupBoxDirectory.Controls.Add(this.TxtDirectoryPath);
-            this.GroupBoxDirectory.Controls.Add(this.Label13);
-            this.GroupBoxDirectory.Controls.Add(this.Label14);
-            this.GroupBoxDirectory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBoxDirectory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GroupBoxDirectory.Location = new System.Drawing.Point(13, 241);
-            this.GroupBoxDirectory.Margin = new System.Windows.Forms.Padding(4);
-            this.GroupBoxDirectory.Name = "GroupBoxDirectory";
-            this.GroupBoxDirectory.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBoxDirectory.Size = new System.Drawing.Size(421, 201);
-            this.GroupBoxDirectory.TabIndex = 7;
-            this.GroupBoxDirectory.TabStop = false;
-            this.GroupBoxDirectory.Text = "DirectoryHidden";
+            this.GbDirectoryHidden.BackColor = System.Drawing.Color.Transparent;
+            this.GbDirectoryHidden.Controls.Add(this.BtnUnhideDirectory);
+            this.GbDirectoryHidden.Controls.Add(this.BtnHideDirectory);
+            this.GbDirectoryHidden.Controls.Add(this.BtnBrowserDirectory_Hide);
+            this.GbDirectoryHidden.Controls.Add(this.TxtDirectoryPath);
+            this.GbDirectoryHidden.Controls.Add(this.Label13);
+            this.GbDirectoryHidden.Controls.Add(this.Label14);
+            this.GbDirectoryHidden.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GbDirectoryHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GbDirectoryHidden.Location = new System.Drawing.Point(13, 241);
+            this.GbDirectoryHidden.Margin = new System.Windows.Forms.Padding(4);
+            this.GbDirectoryHidden.Name = "GbDirectoryHidden";
+            this.GbDirectoryHidden.Padding = new System.Windows.Forms.Padding(4);
+            this.GbDirectoryHidden.Size = new System.Drawing.Size(421, 201);
+            this.GbDirectoryHidden.TabIndex = 7;
+            this.GbDirectoryHidden.TabStop = false;
+            this.GbDirectoryHidden.Text = "DirectoryHidden";
             // 
             // BtnUnhideDirectory
             // 
@@ -329,25 +334,25 @@ namespace FoldeLock
             this.Label14.TabIndex = 6;
             this.Label14.Text = "Directory";
             // 
-            // GroupBoxFile
+            // GbFileHidden
             // 
-            this.GroupBoxFile.BackColor = System.Drawing.Color.Transparent;
-            this.GroupBoxFile.Controls.Add(this.BtnUnhideFile);
-            this.GroupBoxFile.Controls.Add(this.BtnHideFile);
-            this.GroupBoxFile.Controls.Add(this.BtnBrowserFile_Hide);
-            this.GroupBoxFile.Controls.Add(this.TxtFilePath);
-            this.GroupBoxFile.Controls.Add(this.Label11);
-            this.GroupBoxFile.Controls.Add(this.Label12);
-            this.GroupBoxFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBoxFile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GroupBoxFile.Location = new System.Drawing.Point(17, 20);
-            this.GroupBoxFile.Margin = new System.Windows.Forms.Padding(4);
-            this.GroupBoxFile.Name = "GroupBoxFile";
-            this.GroupBoxFile.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBoxFile.Size = new System.Drawing.Size(416, 201);
-            this.GroupBoxFile.TabIndex = 6;
-            this.GroupBoxFile.TabStop = false;
-            this.GroupBoxFile.Text = "File Hidden";
+            this.GbFileHidden.BackColor = System.Drawing.Color.Transparent;
+            this.GbFileHidden.Controls.Add(this.BtnUnhideFile);
+            this.GbFileHidden.Controls.Add(this.BtnHideFile);
+            this.GbFileHidden.Controls.Add(this.BtnBrowserFile_Hide);
+            this.GbFileHidden.Controls.Add(this.TxtFilePath);
+            this.GbFileHidden.Controls.Add(this.Label11);
+            this.GbFileHidden.Controls.Add(this.Label12);
+            this.GbFileHidden.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GbFileHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GbFileHidden.Location = new System.Drawing.Point(17, 20);
+            this.GbFileHidden.Margin = new System.Windows.Forms.Padding(4);
+            this.GbFileHidden.Name = "GbFileHidden";
+            this.GbFileHidden.Padding = new System.Windows.Forms.Padding(4);
+            this.GbFileHidden.Size = new System.Drawing.Size(416, 201);
+            this.GbFileHidden.TabIndex = 6;
+            this.GbFileHidden.TabStop = false;
+            this.GbFileHidden.Text = "File Hidden";
             // 
             // BtnUnhideFile
             // 
@@ -413,27 +418,27 @@ namespace FoldeLock
             this.Label12.TabIndex = 0;
             this.Label12.Text = "File";
             // 
-            // GroupBoxFolder
+            // GbFolderLockUnlock
             // 
-            this.GroupBoxFolder.BackColor = System.Drawing.Color.Transparent;
-            this.GroupBoxFolder.Controls.Add(this.BtnCloseInFolderLock);
-            this.GroupBoxFolder.Controls.Add(this.Label10);
-            this.GroupBoxFolder.Controls.Add(this.Label9);
-            this.GroupBoxFolder.Controls.Add(this.BtnLock);
-            this.GroupBoxFolder.Controls.Add(this.BtnUnlock);
-            this.GroupBoxFolder.Controls.Add(this.Label8);
-            this.GroupBoxFolder.Controls.Add(this.TxtFolderPath);
-            this.GroupBoxFolder.Controls.Add(this.BtnBrowserLock);
-            this.GroupBoxFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBoxFolder.Location = new System.Drawing.Point(679, 598);
-            this.GroupBoxFolder.Margin = new System.Windows.Forms.Padding(4);
-            this.GroupBoxFolder.Name = "GroupBoxFolder";
-            this.GroupBoxFolder.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBoxFolder.Size = new System.Drawing.Size(649, 229);
-            this.GroupBoxFolder.TabIndex = 8;
-            this.GroupBoxFolder.TabStop = false;
-            this.GroupBoxFolder.Text = "Folder Lock Unlock";
-            this.GroupBoxFolder.Visible = false;
+            this.GbFolderLockUnlock.BackColor = System.Drawing.Color.Transparent;
+            this.GbFolderLockUnlock.Controls.Add(this.BtnCloseInFolderLock);
+            this.GbFolderLockUnlock.Controls.Add(this.Label10);
+            this.GbFolderLockUnlock.Controls.Add(this.Label9);
+            this.GbFolderLockUnlock.Controls.Add(this.BtnLock);
+            this.GbFolderLockUnlock.Controls.Add(this.BtnUnlock);
+            this.GbFolderLockUnlock.Controls.Add(this.Label8);
+            this.GbFolderLockUnlock.Controls.Add(this.TxtFolderPath);
+            this.GbFolderLockUnlock.Controls.Add(this.BtnBrowserFolderLock);
+            this.GbFolderLockUnlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GbFolderLockUnlock.Location = new System.Drawing.Point(679, 598);
+            this.GbFolderLockUnlock.Margin = new System.Windows.Forms.Padding(4);
+            this.GbFolderLockUnlock.Name = "GbFolderLockUnlock";
+            this.GbFolderLockUnlock.Padding = new System.Windows.Forms.Padding(4);
+            this.GbFolderLockUnlock.Size = new System.Drawing.Size(649, 229);
+            this.GbFolderLockUnlock.TabIndex = 8;
+            this.GbFolderLockUnlock.TabStop = false;
+            this.GbFolderLockUnlock.Text = "Folder Lock Unlock";
+            this.GbFolderLockUnlock.Visible = false;
             // 
             // BtnCloseInFolderLock
             // 
@@ -445,6 +450,7 @@ namespace FoldeLock
             this.BtnCloseInFolderLock.Size = new System.Drawing.Size(49, 44);
             this.BtnCloseInFolderLock.TabIndex = 18;
             this.BtnCloseInFolderLock.UseVisualStyleBackColor = true;
+            this.BtnCloseInFolderLock.Click += new System.EventHandler(this.BtnCloseInFolderLock_Click);
             // 
             // Label10
             // 
@@ -480,6 +486,7 @@ namespace FoldeLock
             this.BtnLock.Size = new System.Drawing.Size(100, 94);
             this.BtnLock.TabIndex = 15;
             this.BtnLock.UseVisualStyleBackColor = true;
+            this.BtnLock.Click += new System.EventHandler(this.BtnLock_Click);
             // 
             // BtnUnlock
             // 
@@ -491,6 +498,7 @@ namespace FoldeLock
             this.BtnUnlock.Size = new System.Drawing.Size(100, 94);
             this.BtnUnlock.TabIndex = 14;
             this.BtnUnlock.UseVisualStyleBackColor = true;
+            this.BtnUnlock.Click += new System.EventHandler(this.BtnUnlock_Click);
             // 
             // Label8
             // 
@@ -516,18 +524,19 @@ namespace FoldeLock
             this.TxtFolderPath.Size = new System.Drawing.Size(246, 27);
             this.TxtFolderPath.TabIndex = 12;
             // 
-            // BtnBrowserLock
+            // BtnBrowserFolderLock
             // 
-            this.BtnBrowserLock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBrowserLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBrowserLock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBrowserLock.Location = new System.Drawing.Point(427, 44);
-            this.BtnBrowserLock.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnBrowserLock.Name = "BtnBrowserLock";
-            this.BtnBrowserLock.Size = new System.Drawing.Size(116, 28);
-            this.BtnBrowserLock.TabIndex = 11;
-            this.BtnBrowserLock.Text = "Browse";
-            this.BtnBrowserLock.UseVisualStyleBackColor = true;
+            this.BtnBrowserFolderLock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBrowserFolderLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBrowserFolderLock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBrowserFolderLock.Location = new System.Drawing.Point(427, 44);
+            this.BtnBrowserFolderLock.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnBrowserFolderLock.Name = "BtnBrowserFolderLock";
+            this.BtnBrowserFolderLock.Size = new System.Drawing.Size(116, 28);
+            this.BtnBrowserFolderLock.TabIndex = 11;
+            this.BtnBrowserFolderLock.Text = "Browse";
+            this.BtnBrowserFolderLock.UseVisualStyleBackColor = true;
+            this.BtnBrowserFolderLock.Click += new System.EventHandler(this.BtnBrowserFolderLock_Click);
             // 
             // Label16
             // 
@@ -570,86 +579,70 @@ namespace FoldeLock
             this.ButtonOK.Text = "OK";
             this.ButtonOK.UseVisualStyleBackColor = false;
             // 
-            // GroupBox1
+            // GbChangeIconHDD
             // 
-            this.GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.GroupBox1.Controls.Add(this.BtnCloseInChangeIcon);
-            this.GroupBox1.Controls.Add(this.BtnChangeIcon);
-            this.GroupBox1.Controls.Add(this.Label5);
-            this.GroupBox1.Controls.Add(this.ComboBox1);
-            this.GroupBox1.Controls.Add(this.Label4);
-            this.GroupBox1.Controls.Add(this.BtnSelectIcon);
-            this.GroupBox1.Controls.Add(this.TxtIcon);
-            this.GroupBox1.Controls.Add(this.Label6);
-            this.GroupBox1.Controls.Add(this.Label7);
-            this.GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GroupBox1.Location = new System.Drawing.Point(731, 142);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Size = new System.Drawing.Size(649, 229);
-            this.GroupBox1.TabIndex = 16;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Change Drive Icon";
-            this.GroupBox1.Visible = false;
+            this.GbChangeIconHDD.BackColor = System.Drawing.Color.Transparent;
+            this.GbChangeIconHDD.Controls.Add(this.BtnCloseInChangeIcon);
+            this.GbChangeIconHDD.Controls.Add(this.BtnChangeIcon);
+            this.GbChangeIconHDD.Controls.Add(this.Label5);
+            this.GbChangeIconHDD.Controls.Add(this.CbDriveLetter);
+            this.GbChangeIconHDD.Controls.Add(this.Label4);
+            this.GbChangeIconHDD.Controls.Add(this.BtnSelectIcon);
+            this.GbChangeIconHDD.Controls.Add(this.TxtIcon);
+            this.GbChangeIconHDD.Controls.Add(this.Label6);
+            this.GbChangeIconHDD.Controls.Add(this.Label7);
+            this.GbChangeIconHDD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GbChangeIconHDD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GbChangeIconHDD.Location = new System.Drawing.Point(731, 142);
+            this.GbChangeIconHDD.Margin = new System.Windows.Forms.Padding(4);
+            this.GbChangeIconHDD.Name = "GbChangeIconHDD";
+            this.GbChangeIconHDD.Padding = new System.Windows.Forms.Padding(4);
+            this.GbChangeIconHDD.Size = new System.Drawing.Size(649, 229);
+            this.GbChangeIconHDD.TabIndex = 16;
+            this.GbChangeIconHDD.TabStop = false;
+            this.GbChangeIconHDD.Text = "Change Drive Icon";
+            this.GbChangeIconHDD.Visible = false;
             // 
-            // Label7
+            // BtnCloseInChangeIcon
             // 
-            this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label7.Location = new System.Drawing.Point(175, 20);
-            this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(321, 56);
-            this.Label7.TabIndex = 0;
-            this.Label7.Text = "Drive Icon(.icon)";
+            this.BtnCloseInChangeIcon.BackgroundImage = global::FoldeLock.Properties.Resources.button_cancel;
+            this.BtnCloseInChangeIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnCloseInChangeIcon.Location = new System.Drawing.Point(592, 16);
+            this.BtnCloseInChangeIcon.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnCloseInChangeIcon.Name = "BtnCloseInChangeIcon";
+            this.BtnCloseInChangeIcon.Size = new System.Drawing.Size(49, 44);
+            this.BtnCloseInChangeIcon.TabIndex = 8;
+            this.BtnCloseInChangeIcon.UseVisualStyleBackColor = true;
+            this.BtnCloseInChangeIcon.Click += new System.EventHandler(this.BtnCloseInChangeIcon_Click);
             // 
-            // Label6
+            // BtnChangeIcon
             // 
-            this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(124, 107);
-            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(135, 17);
-            this.Label6.TabIndex = 1;
-            this.Label6.Text = "Select Icon(.icon)";
+            this.BtnChangeIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnChangeIcon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnChangeIcon.Location = new System.Drawing.Point(471, 166);
+            this.BtnChangeIcon.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnChangeIcon.Name = "BtnChangeIcon";
+            this.BtnChangeIcon.Size = new System.Drawing.Size(131, 31);
+            this.BtnChangeIcon.TabIndex = 7;
+            this.BtnChangeIcon.Text = "Change";
+            this.BtnChangeIcon.UseVisualStyleBackColor = true;
+            this.BtnChangeIcon.Click += new System.EventHandler(this.BtnChangeIcon_Click);
             // 
-            // TxtIcon
+            // Label5
             // 
-            this.TxtIcon.Location = new System.Drawing.Point(265, 107);
-            this.TxtIcon.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtIcon.Name = "TxtIcon";
-            this.TxtIcon.Size = new System.Drawing.Size(225, 23);
-            this.TxtIcon.TabIndex = 2;
+            this.Label5.AutoSize = true;
+            this.Label5.Location = new System.Drawing.Point(369, 174);
+            this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label5.Name = "Label5";
+            this.Label5.Size = new System.Drawing.Size(98, 17);
+            this.Label5.TabIndex = 6;
+            this.Label5.Text = "Change Icon";
             // 
-            // BtnSelectIcon
+            // CbDriveLetter
             // 
-            this.BtnSelectIcon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnSelectIcon.Location = new System.Drawing.Point(480, 106);
-            this.BtnSelectIcon.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSelectIcon.Name = "BtnSelectIcon";
-            this.BtnSelectIcon.Size = new System.Drawing.Size(36, 26);
-            this.BtnSelectIcon.TabIndex = 3;
-            this.BtnSelectIcon.Text = "...";
-            this.BtnSelectIcon.UseVisualStyleBackColor = true;
-            // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(128, 169);
-            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(99, 17);
-            this.Label4.TabIndex = 4;
-            this.Label4.Text = "Drive  Latter";
-            // 
-            // ComboBox1
-            // 
-            this.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBox1.FormattingEnabled = true;
-            this.ComboBox1.Items.AddRange(new object[] {
+            this.CbDriveLetter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbDriveLetter.FormattingEnabled = true;
+            this.CbDriveLetter.Items.AddRange(new object[] {
             "A",
             "B",
             "C",
@@ -676,44 +669,63 @@ namespace FoldeLock
             "X",
             "Y",
             "Z"});
-            this.ComboBox1.Location = new System.Drawing.Point(231, 165);
-            this.ComboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(100, 25);
-            this.ComboBox1.TabIndex = 5;
+            this.CbDriveLetter.Location = new System.Drawing.Point(231, 165);
+            this.CbDriveLetter.Margin = new System.Windows.Forms.Padding(4);
+            this.CbDriveLetter.Name = "CbDriveLetter";
+            this.CbDriveLetter.Size = new System.Drawing.Size(100, 25);
+            this.CbDriveLetter.TabIndex = 5;
             // 
-            // Label5
+            // Label4
             // 
-            this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(369, 174);
-            this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(98, 17);
-            this.Label5.TabIndex = 6;
-            this.Label5.Text = "Change Icon";
+            this.Label4.AutoSize = true;
+            this.Label4.Location = new System.Drawing.Point(128, 169);
+            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label4.Name = "Label4";
+            this.Label4.Size = new System.Drawing.Size(99, 17);
+            this.Label4.TabIndex = 4;
+            this.Label4.Text = "Drive  Letter";
             // 
-            // BtnChangeIcon
+            // BtnSelectIcon
             // 
-            this.BtnChangeIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnChangeIcon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnChangeIcon.Location = new System.Drawing.Point(471, 166);
-            this.BtnChangeIcon.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnChangeIcon.Name = "BtnChangeIcon";
-            this.BtnChangeIcon.Size = new System.Drawing.Size(131, 31);
-            this.BtnChangeIcon.TabIndex = 7;
-            this.BtnChangeIcon.Text = "Change";
-            this.BtnChangeIcon.UseVisualStyleBackColor = true;
+            this.BtnSelectIcon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnSelectIcon.Location = new System.Drawing.Point(480, 106);
+            this.BtnSelectIcon.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSelectIcon.Name = "BtnSelectIcon";
+            this.BtnSelectIcon.Size = new System.Drawing.Size(36, 26);
+            this.BtnSelectIcon.TabIndex = 3;
+            this.BtnSelectIcon.Text = "...";
+            this.BtnSelectIcon.UseVisualStyleBackColor = true;
+            this.BtnSelectIcon.Click += new System.EventHandler(this.BtnSelectIcon_Click);
             // 
-            // BtnCloseInChangeIcon
+            // TxtIcon
             // 
-            this.BtnCloseInChangeIcon.BackgroundImage = global::FoldeLock.Properties.Resources.button_cancel;
-            this.BtnCloseInChangeIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnCloseInChangeIcon.Location = new System.Drawing.Point(592, 16);
-            this.BtnCloseInChangeIcon.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnCloseInChangeIcon.Name = "BtnCloseInChangeIcon";
-            this.BtnCloseInChangeIcon.Size = new System.Drawing.Size(49, 44);
-            this.BtnCloseInChangeIcon.TabIndex = 8;
-            this.BtnCloseInChangeIcon.UseVisualStyleBackColor = true;
+            this.TxtIcon.Location = new System.Drawing.Point(265, 107);
+            this.TxtIcon.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtIcon.Name = "TxtIcon";
+            this.TxtIcon.Size = new System.Drawing.Size(225, 23);
+            this.TxtIcon.TabIndex = 2;
+            // 
+            // Label6
+            // 
+            this.Label6.AutoSize = true;
+            this.Label6.Location = new System.Drawing.Point(124, 107);
+            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label6.Name = "Label6";
+            this.Label6.Size = new System.Drawing.Size(135, 17);
+            this.Label6.TabIndex = 1;
+            this.Label6.Text = "Select Icon(.icon)";
+            // 
+            // Label7
+            // 
+            this.Label7.AutoSize = true;
+            this.Label7.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Label7.Location = new System.Drawing.Point(175, 20);
+            this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(321, 56);
+            this.Label7.TabIndex = 0;
+            this.Label7.Text = "Drive Icon(.icon)";
             // 
             // PanelInfo
             // 
@@ -728,14 +740,18 @@ namespace FoldeLock
             this.PanelInfo.TabIndex = 14;
             this.PanelInfo.Visible = false;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FoldeLock.Properties.Resources.Main2;
             this.ClientSize = new System.Drawing.Size(1365, 812);
-            this.Controls.Add(this.GroupBox1);
-            this.Controls.Add(this.GroupBoxFolder);
+            this.Controls.Add(this.GbChangeIconHDD);
+            this.Controls.Add(this.GbFolderLockUnlock);
             this.Controls.Add(this.PanelHidden);
             this.Controls.Add(this.PanelInfo);
             this.Controls.Add(this.Label17);
@@ -751,14 +767,14 @@ namespace FoldeLock
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             this.PanelHidden.ResumeLayout(false);
-            this.GroupBoxDirectory.ResumeLayout(false);
-            this.GroupBoxDirectory.PerformLayout();
-            this.GroupBoxFile.ResumeLayout(false);
-            this.GroupBoxFile.PerformLayout();
-            this.GroupBoxFolder.ResumeLayout(false);
-            this.GroupBoxFolder.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox1.PerformLayout();
+            this.GbDirectoryHidden.ResumeLayout(false);
+            this.GbDirectoryHidden.PerformLayout();
+            this.GbFileHidden.ResumeLayout(false);
+            this.GbFileHidden.PerformLayout();
+            this.GbFolderLockUnlock.ResumeLayout(false);
+            this.GbFolderLockUnlock.PerformLayout();
+            this.GbChangeIconHDD.ResumeLayout(false);
+            this.GbChangeIconHDD.PerformLayout();
             this.PanelInfo.ResumeLayout(false);
             this.PanelInfo.PerformLayout();
             this.ResumeLayout(false);
@@ -781,21 +797,21 @@ namespace FoldeLock
         internal System.Windows.Forms.Label Label17;
         internal System.Windows.Forms.Button BtnChangePass;
         internal System.Windows.Forms.Panel PanelHidden;
-        internal System.Windows.Forms.GroupBox GroupBoxDirectory;
+        internal System.Windows.Forms.GroupBox GbDirectoryHidden;
         internal System.Windows.Forms.Button BtnUnhideDirectory;
         internal System.Windows.Forms.Button BtnHideDirectory;
         internal System.Windows.Forms.Button BtnBrowserDirectory_Hide;
         internal System.Windows.Forms.TextBox TxtDirectoryPath;
         internal System.Windows.Forms.Label Label13;
         internal System.Windows.Forms.Label Label14;
-        internal System.Windows.Forms.GroupBox GroupBoxFile;
+        internal System.Windows.Forms.GroupBox GbFileHidden;
         internal System.Windows.Forms.Button BtnUnhideFile;
         internal System.Windows.Forms.Button BtnHideFile;
         internal System.Windows.Forms.Button BtnBrowserFile_Hide;
         internal System.Windows.Forms.TextBox TxtFilePath;
         internal System.Windows.Forms.Label Label11;
         internal System.Windows.Forms.Label Label12;
-        internal System.Windows.Forms.GroupBox GroupBoxFolder;
+        internal System.Windows.Forms.GroupBox GbFolderLockUnlock;
         internal System.Windows.Forms.Button BtnCloseInFolderLock;
         internal System.Windows.Forms.Label Label10;
         internal System.Windows.Forms.Label Label9;
@@ -803,20 +819,22 @@ namespace FoldeLock
         internal System.Windows.Forms.Button BtnUnlock;
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.TextBox TxtFolderPath;
-        internal System.Windows.Forms.Button BtnBrowserLock;
+        internal System.Windows.Forms.Button BtnBrowserFolderLock;
         internal System.Windows.Forms.Label Label16;
         internal System.Windows.Forms.Label Label15;
         internal System.Windows.Forms.Button ButtonOK;
-        internal System.Windows.Forms.GroupBox GroupBox1;
+        internal System.Windows.Forms.GroupBox GbChangeIconHDD;
         internal System.Windows.Forms.Button BtnCloseInChangeIcon;
         internal System.Windows.Forms.Button BtnChangeIcon;
         internal System.Windows.Forms.Label Label5;
-        internal System.Windows.Forms.ComboBox ComboBox1;
+        internal System.Windows.Forms.ComboBox CbDriveLetter;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Button BtnSelectIcon;
         internal System.Windows.Forms.TextBox TxtIcon;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.Panel PanelInfo;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
