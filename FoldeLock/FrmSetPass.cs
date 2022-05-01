@@ -40,6 +40,8 @@ namespace FoldeLock
                 Settings.Default.user = txtUser.Text.Trim();
                 Settings.Default.password = txtPass.Text.Trim();
                 Settings.Default.Save();
+
+                MessageBox.Show("User Name And Password Save Successfully");
                 this.Close();
             }
         }

@@ -152,7 +152,7 @@ namespace FoldeLock
             this.Controls.Add(this.Label3);
             this.Name = "FrmSetPass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmSetPass";
+            this.Text = "Set Account";
             this.Load += new System.EventHandler(this.FrmSetPass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -101,7 +101,7 @@ namespace FoldeLock
             this.Panel1.Controls.Add(this.BtnHideFolder);
             this.Panel1.Controls.Add(this.BtnFolderLock);
             this.Panel1.Controls.Add(this.BtnChangeIconHDD);
-            this.Panel1.Location = new System.Drawing.Point(22, 85);
+            this.Panel1.Location = new System.Drawing.Point(23, 89);
             this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(183, 528);
@@ -246,6 +246,7 @@ namespace FoldeLock
             this.PanelHidden.BackColor = System.Drawing.Color.Transparent;
             this.PanelHidden.Controls.Add(this.GbDirectoryHidden);
             this.PanelHidden.Controls.Add(this.GbFileHidden);
+            this.PanelHidden.Controls.Add(this.PanelInfo);
             this.PanelHidden.Location = new System.Drawing.Point(233, 89);
             this.PanelHidden.Margin = new System.Windows.Forms.Padding(4);
             this.PanelHidden.Name = "PanelHidden";
@@ -439,7 +440,7 @@ namespace FoldeLock
             this.GbFolderLockUnlock.Controls.Add(this.TxtFolderPath);
             this.GbFolderLockUnlock.Controls.Add(this.BtnBrowserFolderLock);
             this.GbFolderLockUnlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GbFolderLockUnlock.Location = new System.Drawing.Point(679, 598);
+            this.GbFolderLockUnlock.Location = new System.Drawing.Point(228, 160);
             this.GbFolderLockUnlock.Margin = new System.Windows.Forms.Padding(4);
             this.GbFolderLockUnlock.Name = "GbFolderLockUnlock";
             this.GbFolderLockUnlock.Padding = new System.Windows.Forms.Padding(4);
@@ -602,7 +603,7 @@ namespace FoldeLock
             this.GbChangeIconHDD.Controls.Add(this.Label7);
             this.GbChangeIconHDD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GbChangeIconHDD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GbChangeIconHDD.Location = new System.Drawing.Point(731, 142);
+            this.GbChangeIconHDD.Location = new System.Drawing.Point(228, 136);
             this.GbChangeIconHDD.Margin = new System.Windows.Forms.Padding(4);
             this.GbChangeIconHDD.Name = "GbChangeIconHDD";
             this.GbChangeIconHDD.Padding = new System.Windows.Forms.Padding(4);
@@ -742,7 +743,7 @@ namespace FoldeLock
             this.PanelInfo.Controls.Add(this.ButtonOK);
             this.PanelInfo.Controls.Add(this.Label15);
             this.PanelInfo.Controls.Add(this.Label16);
-            this.PanelInfo.Location = new System.Drawing.Point(228, 561);
+            this.PanelInfo.Location = new System.Drawing.Point(4, 9);
             this.PanelInfo.Margin = new System.Windows.Forms.Padding(4);
             this.PanelInfo.Name = "PanelInfo";
             this.PanelInfo.Size = new System.Drawing.Size(510, 319);
@@ -758,10 +759,9 @@ namespace FoldeLock
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FoldeLock.Properties.Resources.Main2;
-            this.ClientSize = new System.Drawing.Size(1365, 812);
+            this.ClientSize = new System.Drawing.Size(896, 684);
             this.Controls.Add(this.GbChangeIconHDD);
             this.Controls.Add(this.GbFolderLockUnlock);
-            this.Controls.Add(this.PanelInfo);
             this.Controls.Add(this.PanelHidden);
             this.Controls.Add(this.Label17);
             this.Controls.Add(this.BtnChangePass);
@@ -772,7 +772,7 @@ namespace FoldeLock
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMain";
+            this.Text = "Main Form";
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             this.PanelHidden.ResumeLayout(false);
