@@ -204,7 +204,7 @@ namespace FoldeLock
             GbChangeIconHDD.Visible = false;
             GbFolderLockUnlock.Visible = false;
             GbFileHidden.Visible = true;
-            GbDirectoryHidden.Visible = false;
+            GbDirectoryHidden.Visible = true;
             PanelHidden.Visible = true;
             PanelInfo.Visible = false;
         }

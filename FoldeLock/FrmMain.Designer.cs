@@ -34,7 +34,6 @@ namespace FoldeLock
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
-            this.Button5 = new System.Windows.Forms.Button();
             this.BtnHideFolder = new System.Windows.Forms.Button();
             this.BtnFolderLock = new System.Windows.Forms.Button();
             this.BtnChangeIconHDD = new System.Windows.Forms.Button();
@@ -57,6 +56,10 @@ namespace FoldeLock
             this.TxtFilePath = new System.Windows.Forms.TextBox();
             this.Label11 = new System.Windows.Forms.Label();
             this.Label12 = new System.Windows.Forms.Label();
+            this.PanelInfo = new System.Windows.Forms.Panel();
+            this.ButtonOK = new System.Windows.Forms.Button();
+            this.Label15 = new System.Windows.Forms.Label();
+            this.Label16 = new System.Windows.Forms.Label();
             this.GbFolderLockUnlock = new System.Windows.Forms.GroupBox();
             this.BtnCloseInFolderLock = new System.Windows.Forms.Button();
             this.Label10 = new System.Windows.Forms.Label();
@@ -66,9 +69,6 @@ namespace FoldeLock
             this.Label8 = new System.Windows.Forms.Label();
             this.TxtFolderPath = new System.Windows.Forms.TextBox();
             this.BtnBrowserFolderLock = new System.Windows.Forms.Button();
-            this.Label16 = new System.Windows.Forms.Label();
-            this.Label15 = new System.Windows.Forms.Label();
-            this.ButtonOK = new System.Windows.Forms.Button();
             this.GbChangeIconHDD = new System.Windows.Forms.GroupBox();
             this.BtnCloseInChangeIcon = new System.Windows.Forms.Button();
             this.BtnChangeIcon = new System.Windows.Forms.Button();
@@ -79,16 +79,15 @@ namespace FoldeLock
             this.TxtIcon = new System.Windows.Forms.TextBox();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label7 = new System.Windows.Forms.Label();
-            this.PanelInfo = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.Panel1.SuspendLayout();
             this.PanelHidden.SuspendLayout();
             this.GbDirectoryHidden.SuspendLayout();
             this.GbFileHidden.SuspendLayout();
+            this.PanelInfo.SuspendLayout();
             this.GbFolderLockUnlock.SuspendLayout();
             this.GbChangeIconHDD.SuspendLayout();
-            this.PanelInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel1
@@ -97,14 +96,13 @@ namespace FoldeLock
             this.Panel1.Controls.Add(this.Label3);
             this.Panel1.Controls.Add(this.Label2);
             this.Panel1.Controls.Add(this.Label1);
-            this.Panel1.Controls.Add(this.Button5);
             this.Panel1.Controls.Add(this.BtnHideFolder);
             this.Panel1.Controls.Add(this.BtnFolderLock);
             this.Panel1.Controls.Add(this.BtnChangeIconHDD);
-            this.Panel1.Location = new System.Drawing.Point(23, 89);
+            this.Panel1.Location = new System.Drawing.Point(13, 98);
             this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(183, 528);
+            this.Panel1.Size = new System.Drawing.Size(183, 601);
             this.Panel1.TabIndex = 5;
             // 
             // Label3
@@ -139,18 +137,6 @@ namespace FoldeLock
             this.Label1.Size = new System.Drawing.Size(139, 18);
             this.Label1.TabIndex = 5;
             this.Label1.Text = "HDD Icon Change";
-            // 
-            // Button5
-            // 
-            this.Button5.BackgroundImage = global::FoldeLock.Properties.Resources.about_us_icon_15;
-            this.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button5.Location = new System.Drawing.Point(25, 433);
-            this.Button5.Margin = new System.Windows.Forms.Padding(4);
-            this.Button5.Name = "Button5";
-            this.Button5.Size = new System.Drawing.Size(137, 91);
-            this.Button5.TabIndex = 4;
-            this.Button5.UseVisualStyleBackColor = true;
             // 
             // BtnHideFolder
             // 
@@ -195,7 +181,7 @@ namespace FoldeLock
             // 
             this.BtnMinimize.BackgroundImage = global::FoldeLock.Properties.Resources.min1;
             this.BtnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnMinimize.Location = new System.Drawing.Point(777, 13);
+            this.BtnMinimize.Location = new System.Drawing.Point(789, 13);
             this.BtnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.BtnMinimize.Name = "BtnMinimize";
             this.BtnMinimize.Size = new System.Drawing.Size(49, 44);
@@ -207,7 +193,7 @@ namespace FoldeLock
             // 
             this.BtnClose.BackgroundImage = global::FoldeLock.Properties.Resources.button_cancel;
             this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnClose.Location = new System.Drawing.Point(829, 13);
+            this.BtnClose.Location = new System.Drawing.Point(841, 13);
             this.BtnClose.Margin = new System.Windows.Forms.Padding(4);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(49, 44);
@@ -428,6 +414,60 @@ namespace FoldeLock
             this.Label12.TabIndex = 0;
             this.Label12.Text = "File";
             // 
+            // PanelInfo
+            // 
+            this.PanelInfo.BackColor = System.Drawing.Color.Transparent;
+            this.PanelInfo.Controls.Add(this.ButtonOK);
+            this.PanelInfo.Controls.Add(this.Label15);
+            this.PanelInfo.Controls.Add(this.Label16);
+            this.PanelInfo.Location = new System.Drawing.Point(4, 9);
+            this.PanelInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.PanelInfo.Name = "PanelInfo";
+            this.PanelInfo.Size = new System.Drawing.Size(510, 319);
+            this.PanelInfo.TabIndex = 14;
+            this.PanelInfo.Visible = false;
+            // 
+            // ButtonOK
+            // 
+            this.ButtonOK.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonOK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ButtonOK.Location = new System.Drawing.Point(251, 281);
+            this.ButtonOK.Margin = new System.Windows.Forms.Padding(4);
+            this.ButtonOK.Name = "ButtonOK";
+            this.ButtonOK.Size = new System.Drawing.Size(108, 32);
+            this.ButtonOK.TabIndex = 5;
+            this.ButtonOK.Text = "OK";
+            this.ButtonOK.UseVisualStyleBackColor = false;
+            // 
+            // Label15
+            // 
+            this.Label15.AutoSize = true;
+            this.Label15.BackColor = System.Drawing.Color.Transparent;
+            this.Label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Label15.Location = new System.Drawing.Point(185, 101);
+            this.Label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label15.Name = "Label15";
+            this.Label15.Size = new System.Drawing.Size(284, 154);
+            this.Label15.TabIndex = 4;
+            this.Label15.Text = "This Is Utility Software \r\n\r\nDevelop By Software Academy\r\n\r\nCopyright@S.A Compute" +
+    "rs\r\n                \r\nMobile No. 03012898733";
+            // 
+            // Label16
+            // 
+            this.Label16.AutoSize = true;
+            this.Label16.BackColor = System.Drawing.Color.Transparent;
+            this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Label16.Location = new System.Drawing.Point(209, 44);
+            this.Label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label16.Name = "Label16";
+            this.Label16.Size = new System.Drawing.Size(160, 38);
+            this.Label16.TabIndex = 3;
+            this.Label16.Text = "About Us";
+            // 
             // GbFolderLockUnlock
             // 
             this.GbFolderLockUnlock.BackColor = System.Drawing.Color.Transparent;
@@ -548,47 +588,6 @@ namespace FoldeLock
             this.BtnBrowserFolderLock.UseVisualStyleBackColor = true;
             this.BtnBrowserFolderLock.Click += new System.EventHandler(this.BtnBrowserFolderLock_Click);
             // 
-            // Label16
-            // 
-            this.Label16.AutoSize = true;
-            this.Label16.BackColor = System.Drawing.Color.Transparent;
-            this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label16.Location = new System.Drawing.Point(209, 44);
-            this.Label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(160, 38);
-            this.Label16.TabIndex = 3;
-            this.Label16.Text = "About Us";
-            // 
-            // Label15
-            // 
-            this.Label15.AutoSize = true;
-            this.Label15.BackColor = System.Drawing.Color.Transparent;
-            this.Label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label15.Location = new System.Drawing.Point(185, 101);
-            this.Label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(284, 154);
-            this.Label15.TabIndex = 4;
-            this.Label15.Text = "This Is Utility Software \r\n\r\nDevelop By Software Academy\r\n\r\nCopyright@S.A Compute" +
-    "rs\r\n                \r\nMobile No. 03012898733";
-            // 
-            // ButtonOK
-            // 
-            this.ButtonOK.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonOK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ButtonOK.Location = new System.Drawing.Point(251, 281);
-            this.ButtonOK.Margin = new System.Windows.Forms.Padding(4);
-            this.ButtonOK.Name = "ButtonOK";
-            this.ButtonOK.Size = new System.Drawing.Size(108, 32);
-            this.ButtonOK.TabIndex = 5;
-            this.ButtonOK.Text = "OK";
-            this.ButtonOK.UseVisualStyleBackColor = false;
-            // 
             // GbChangeIconHDD
             // 
             this.GbChangeIconHDD.BackColor = System.Drawing.Color.Transparent;
@@ -603,11 +602,11 @@ namespace FoldeLock
             this.GbChangeIconHDD.Controls.Add(this.Label7);
             this.GbChangeIconHDD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GbChangeIconHDD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GbChangeIconHDD.Location = new System.Drawing.Point(228, 136);
+            this.GbChangeIconHDD.Location = new System.Drawing.Point(204, 142);
             this.GbChangeIconHDD.Margin = new System.Windows.Forms.Padding(4);
             this.GbChangeIconHDD.Name = "GbChangeIconHDD";
             this.GbChangeIconHDD.Padding = new System.Windows.Forms.Padding(4);
-            this.GbChangeIconHDD.Size = new System.Drawing.Size(649, 229);
+            this.GbChangeIconHDD.Size = new System.Drawing.Size(543, 229);
             this.GbChangeIconHDD.TabIndex = 16;
             this.GbChangeIconHDD.TabStop = false;
             this.GbChangeIconHDD.Text = "Change Drive Icon";
@@ -617,7 +616,7 @@ namespace FoldeLock
             // 
             this.BtnCloseInChangeIcon.BackgroundImage = global::FoldeLock.Properties.Resources.button_cancel;
             this.BtnCloseInChangeIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnCloseInChangeIcon.Location = new System.Drawing.Point(592, 16);
+            this.BtnCloseInChangeIcon.Location = new System.Drawing.Point(486, 24);
             this.BtnCloseInChangeIcon.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCloseInChangeIcon.Name = "BtnCloseInChangeIcon";
             this.BtnCloseInChangeIcon.Size = new System.Drawing.Size(49, 44);
@@ -629,7 +628,7 @@ namespace FoldeLock
             // 
             this.BtnChangeIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChangeIcon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnChangeIcon.Location = new System.Drawing.Point(471, 166);
+            this.BtnChangeIcon.Location = new System.Drawing.Point(365, 174);
             this.BtnChangeIcon.Margin = new System.Windows.Forms.Padding(4);
             this.BtnChangeIcon.Name = "BtnChangeIcon";
             this.BtnChangeIcon.Size = new System.Drawing.Size(131, 31);
@@ -641,7 +640,7 @@ namespace FoldeLock
             // Label5
             // 
             this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(369, 174);
+            this.Label5.Location = new System.Drawing.Point(263, 182);
             this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(98, 17);
@@ -679,7 +678,7 @@ namespace FoldeLock
             "X",
             "Y",
             "Z"});
-            this.CbDriveLetter.Location = new System.Drawing.Point(231, 165);
+            this.CbDriveLetter.Location = new System.Drawing.Point(125, 173);
             this.CbDriveLetter.Margin = new System.Windows.Forms.Padding(4);
             this.CbDriveLetter.Name = "CbDriveLetter";
             this.CbDriveLetter.Size = new System.Drawing.Size(100, 25);
@@ -688,7 +687,7 @@ namespace FoldeLock
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(128, 169);
+            this.Label4.Location = new System.Drawing.Point(22, 177);
             this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(99, 17);
@@ -698,7 +697,7 @@ namespace FoldeLock
             // BtnSelectIcon
             // 
             this.BtnSelectIcon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnSelectIcon.Location = new System.Drawing.Point(480, 106);
+            this.BtnSelectIcon.Location = new System.Drawing.Point(374, 114);
             this.BtnSelectIcon.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSelectIcon.Name = "BtnSelectIcon";
             this.BtnSelectIcon.Size = new System.Drawing.Size(36, 26);
@@ -709,7 +708,7 @@ namespace FoldeLock
             // 
             // TxtIcon
             // 
-            this.TxtIcon.Location = new System.Drawing.Point(265, 107);
+            this.TxtIcon.Location = new System.Drawing.Point(159, 115);
             this.TxtIcon.Margin = new System.Windows.Forms.Padding(4);
             this.TxtIcon.Name = "TxtIcon";
             this.TxtIcon.Size = new System.Drawing.Size(225, 23);
@@ -718,7 +717,7 @@ namespace FoldeLock
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(124, 107);
+            this.Label6.Location = new System.Drawing.Point(18, 115);
             this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(135, 17);
@@ -730,25 +729,12 @@ namespace FoldeLock
             this.Label7.AutoSize = true;
             this.Label7.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label7.Location = new System.Drawing.Point(175, 20);
+            this.Label7.Location = new System.Drawing.Point(69, 28);
             this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(321, 56);
             this.Label7.TabIndex = 0;
             this.Label7.Text = "Drive Icon(.icon)";
-            // 
-            // PanelInfo
-            // 
-            this.PanelInfo.BackColor = System.Drawing.Color.Transparent;
-            this.PanelInfo.Controls.Add(this.ButtonOK);
-            this.PanelInfo.Controls.Add(this.Label15);
-            this.PanelInfo.Controls.Add(this.Label16);
-            this.PanelInfo.Location = new System.Drawing.Point(4, 9);
-            this.PanelInfo.Margin = new System.Windows.Forms.Padding(4);
-            this.PanelInfo.Name = "PanelInfo";
-            this.PanelInfo.Size = new System.Drawing.Size(510, 319);
-            this.PanelInfo.TabIndex = 14;
-            this.PanelInfo.Visible = false;
             // 
             // openFileDialog1
             // 
@@ -759,7 +745,7 @@ namespace FoldeLock
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FoldeLock.Properties.Resources.Main2;
-            this.ClientSize = new System.Drawing.Size(896, 684);
+            this.ClientSize = new System.Drawing.Size(893, 604);
             this.Controls.Add(this.GbChangeIconHDD);
             this.Controls.Add(this.GbFolderLockUnlock);
             this.Controls.Add(this.PanelHidden);
@@ -780,12 +766,12 @@ namespace FoldeLock
             this.GbDirectoryHidden.PerformLayout();
             this.GbFileHidden.ResumeLayout(false);
             this.GbFileHidden.PerformLayout();
+            this.PanelInfo.ResumeLayout(false);
+            this.PanelInfo.PerformLayout();
             this.GbFolderLockUnlock.ResumeLayout(false);
             this.GbFolderLockUnlock.PerformLayout();
             this.GbChangeIconHDD.ResumeLayout(false);
             this.GbChangeIconHDD.PerformLayout();
-            this.PanelInfo.ResumeLayout(false);
-            this.PanelInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -797,7 +783,6 @@ namespace FoldeLock
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.Button Button5;
         internal System.Windows.Forms.Button BtnHideFolder;
         internal System.Windows.Forms.Button BtnFolderLock;
         internal System.Windows.Forms.Button BtnChangeIconHDD;

@@ -22,10 +22,12 @@ namespace FoldeLock
         {
             TxtPath.Text = Settings.Default.user;
 
-            if (TxtPath.Text == "")
+            if (TxtPath.Text == "") 
             {
                 FrmSetPass frmSetPass = new FrmSetPass();
                 frmSetPass.Show();
+
+                this.WindowState = FormWindowState.Minimized;
             }
         }
 
