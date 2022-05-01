@@ -27,12 +27,12 @@ namespace FoldeLock
         {
             if (txtUser.Text == "")
             {
-                MessageBox.Show("Please Enter your user name");
+                MessageBox.Show("Please enter your user name");
                 txtUser.Focus();
             }
             else if (txtPass.Text == "")
             {
-                MessageBox.Show("Please Enter your password");
+                MessageBox.Show("Please enter your password");
                 txtPass.Focus();
             }
             else
@@ -53,14 +53,7 @@ namespace FoldeLock
 
         private void CheckBoxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckBoxShowPassword.CheckState == CheckState.Checked)
-            {
-                txtPass.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtPass.UseSystemPasswordChar = true;
-            }
+            txtPass.UseSystemPasswordChar = CheckBoxShowPassword.CheckState != CheckState.Checked;
         }
     }
 }

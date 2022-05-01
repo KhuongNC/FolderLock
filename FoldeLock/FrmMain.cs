@@ -51,6 +51,7 @@ namespace FoldeLock
         private void BtnChangeIcon_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Make sure you run as Administrator");
+
             if (TxtIcon.Text == "")
             {
                 MessageBox.Show("Please select an icon");
